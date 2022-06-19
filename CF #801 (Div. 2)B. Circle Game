@@ -64,14 +64,7 @@ int main()
 		if(x!=0&&x%2==1)puts("Joe");
 		else if(x!=0&&x%2==0)puts("Mike");
 		else if(n%2)puts("Mike");
-		else cout<<name<<endl;
-		
-		 
-		 
-		 
-		 
-		 
-		 
+		else cout<<name<<endl;	 
 	}
 	return 0;
 }

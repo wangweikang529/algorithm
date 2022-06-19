@@ -1,0 +1,81 @@
+#include<iostream>
+#include<cstdio>
+#include<string>
+
+using namespace std;
+
+const int mas=55;
+int v[mas],t,n;
+
+int main()
+{
+	scanf("%d",&t);
+	while(t--)
+	{
+		scanf("%d",&n);
+		for(int i=1;i<=n;i++)
+		scanf("%d",&v[i]);
+		
+		 int x=0;
+		 
+		 
+		  for(int i=1;i<=n;i++)
+		 	if(v[i]<=0)
+		     {
+		 		x=i;
+		 	    break;
+		 	}
+		 
+		 
+		 string name=""; 
+		 int cnt=v[1];
+		 int id=1;
+		 
+		for(int i=2;i<=n;i++)
+			if(v[i]<cnt)//不可以相等 
+			cnt=v[i],id=i;
+		
+		
+		if(id%2==0)name="Mike";
+		else name="Joe";	
+		 /*for(int i=1;i<n;i+=2)
+		 {
+		 	if(v[i]<=v[i+1])
+		 	{
+			 	if(v[i]+1<cnt)//不可以带等号 因为有顺序，先到先得  
+			 	{
+				 	cnt=v[i]+1;
+				 	name="Joe";
+				 }
+			 }
+			 else if(v[i]>v[i+1])
+			 {
+			 	if(v[i+1]+1<cnt)//不可以带等号 因为有顺序，先到先得 
+				{
+				 	cnt=v[i+1]+1;
+				 	name="Mike";
+					 }
+			 }
+		 	
+		 }
+		*/ 
+		 
+		 
+		if(x!=0&&x%2==1)puts("Joe");
+		else if(x!=0&&x%2==0)puts("Mike");
+		else if(n%2)puts("Mike");
+		else cout<<name<<endl;
+		
+		 
+		 
+		 
+		 
+		 
+		 
+	}
+	return 0;
+}
+
+ 
+
+ 
